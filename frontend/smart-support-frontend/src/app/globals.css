@@ -4,48 +4,58 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Light theme with brown-red neon accent */
+    --background: 0 0% 98%;
+    --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 221.2 83.2% 53.3%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --popover-foreground: 240 10% 3.9%;
+    
+    /* Brown-Red Neon Accent (Ember) - Light Theme */
+    --primary: 8 85% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: rgba(234, 88, 12, 0.3);
+    
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
-    --radius: 0.5rem;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 8 85% 50%;
+    --radius: 0.75rem;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    /* Dark theme with brown-red neon accent */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    
+    /* Brown-Red Neon Accent (Ember) - Dark Theme */
+    --primary: 8 95% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: rgba(255, 100, 50, 0.4);
+    
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 48%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 8 95% 55%;
   }
 }
 
@@ -55,6 +65,47 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Dark gradient background */
+@layer base {
+  .dark body {
+    background: linear-gradient(135deg, #06060A 0%, #0B0F1A 50%, #080A12 100%);
+    background-attachment: fixed;
+  }
+}
+
+/* Glass panel utility */
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .dark .glass {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  /* Brown-Red Neon Glow */
+  .glow-ember {
+    box-shadow: 0 0 0 1px rgba(255, 100, 50, 0.3), 0 0 24px rgba(255, 100, 50, 0.2);
+  }
+  
+  .dark .glow-ember {
+    box-shadow: 0 0 0 1px rgba(255, 100, 50, 0.4), 0 0 32px rgba(255, 100, 50, 0.3);
+  }
+  
+  /* Subtle glow for active elements */
+  .glow-subtle {
+    box-shadow: 0 0 0 1px rgba(255, 100, 50, 0.2), 0 0 12px rgba(255, 100, 50, 0.1);
+  }
+  
+  .dark .glow-subtle {
+    box-shadow: 0 0 0 1px rgba(255, 100, 50, 0.3), 0 0 16px rgba(255, 100, 50, 0.15);
   }
 }
 
@@ -73,6 +124,14 @@
   .scrollbar-thin::-webkit-scrollbar-thumb:hover {
     @apply bg-muted-foreground/50;
   }
+  
+  .dark .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  .dark .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
 }
 
 /* Chat background pattern */
@@ -83,6 +142,14 @@
     transparent 0
   );
   background-size: 24px 24px;
+}
+
+.dark .chat-bg-pattern {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 0
+  );
 }
 
 /* Typing animation */
@@ -109,4 +176,93 @@
 
 .typing-dot:nth-child(3) {
   animation-delay: 0.4s;
+}
+
+/* Subtle gradient animation for background */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animated-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+/* Message bubble glow for assistant */
+@layer utilities {
+  .message-glow {
+    position: relative;
+  }
+  
+  .message-glow::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(255, 100, 50, 0.2), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  .dark .message-glow::before {
+    background: linear-gradient(135deg, rgba(255, 100, 50, 0.3), transparent);
+  }
+  
+  .message-glow:hover::before {
+    opacity: 1;
+  }
+}
+
+/* Focus ring with neon accent */
+@layer utilities {
+  .focus-ring-ember:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--background), 0 0 0 4px hsl(var(--primary));
+  }
+}
+
+/* Noise texture overlay */
+@layer utilities {
+  .noise-overlay {
+    position: relative;
+  }
+  
+  .noise-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+/* Smooth transitions */
+@layer base {
+  * {
+    @apply transition-colors duration-200;
+  }
+}
+
+/* Button hover effects */
+@layer utilities {
+  .btn-hover-glow {
+    transition: all 0.2s ease;
+  }
+  
+  .btn-hover-glow:hover {
+    box-shadow: 0 0 20px rgba(255, 100, 50, 0.3);
+  }
+  
+  .dark .btn-hover-glow:hover {
+    box-shadow: 0 0 24px rgba(255, 100, 50, 0.4);
+  }
 }

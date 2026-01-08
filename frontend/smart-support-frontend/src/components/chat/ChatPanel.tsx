@@ -1,12 +1,13 @@
 /**
  * ChatPanel component - The main chat area displaying messages and handling auto-scroll.
  * Features include message list, typing indicator, scroll-to-bottom button, and empty state.
+ * Styled with glassmorphism and brown-red neon accent.
  */
 
 "use client";
 
 import * as React from "react";
-import { ArrowDown, Bot } from "lucide-react";
+import { ArrowDown, Bot, Sparkles, Package, ShoppingCart, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { MessageBubble } from "./MessageBubble";
@@ -17,10 +18,26 @@ import { cn } from "@/lib/utils";
  * Example prompts for the empty state.
  */
 const EXAMPLE_PROMPTS = [
-  "Track order ORD-1001",
-  "Where is my order 55512?",
-  "Wireless Mouse",
-  "What is the price of Mechanical Keyboard?",
+  {
+    text: "Track order ORD-1001",
+    icon: ShoppingCart,
+    color: "text-blue-500",
+  },
+  {
+    text: "Where is my order 55512?",
+    icon: Package,
+    color: "text-purple-500",
+  },
+  {
+    text: "Wireless Mouse",
+    icon: Search,
+    color: "text-green-500",
+  },
+  {
+    text: "What is the price of Mechanical Keyboard?",
+    icon: Sparkles,
+    color: "text-primary",
+  },
 ];
 
 /**
@@ -48,6 +65,7 @@ export interface ChatPanelProps {
  * - Typing indicator when assistant is responding
  * - Empty state with example prompts
  * - Smooth scrolling animations
+ * - Glassmorphism styling
  * 
  * @example
  * <ChatPanel
@@ -140,14 +158,14 @@ export function ChatPanel({
           {/* Empty state */}
           {messages.length === 0 && (
             <div className="flex flex-1 items-center justify-center p-8">
-              <div className="max-w-md space-y-6 text-center">
-                {/* Bot icon */}
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
-                  <Bot className="h-8 w-8 text-primary" />
+              <div className="max-w-md space-y-8 text-center">
+                {/* Bot icon with glow */}
+                <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/20 to-orange-600/20 glow-ember">
+                  <Bot className="h-10 w-10 text-primary" />
                 </div>
 
                 {/* Welcome message */}
-                <div className="space-y-2">
+                <div className="space-y-3">
                   <h2 className="text-2xl font-semibold">
                     Welcome to Smart Support
                   </h2>
@@ -158,22 +176,28 @@ export function ChatPanel({
 
                 {/* Example prompts */}
                 {onExamplePrompt && (
-                  <div className="space-y-3">
+                  <div className="space-y-4">
                     <p className="text-sm font-medium text-muted-foreground">
                       Try asking:
                     </p>
-                    <div className="grid gap-2 sm:grid-cols-2">
-                      {EXAMPLE_PROMPTS.map((prompt, index) => (
-                        <Card
-                          key={index}
-                          className="cursor-pointer border-dashed transition-colors hover:border-primary/50 hover:bg-accent"
-                          onClick={() => onExamplePrompt(prompt)}
-                        >
-                          <div className="p-3 text-sm">
-                            {prompt}
-                          </div>
-                        </Card>
-                      ))}
+                    <div className="grid gap-3 sm:grid-cols-2">
+                      {EXAMPLE_PROMPTS.map((prompt, index) => {
+                        const Icon = prompt.icon;
+                        return (
+                          <Card
+                            key={index}
+                            className="group cursor-pointer border-dashed border-border/50 bg-card/50 backdrop-blur-sm transition-all duration-200 hover:border-primary/50 hover:bg-card hover:shadow-lg hover:shadow-primary/10"
+                            onClick={() => onExamplePrompt(prompt.text)}
+                          >
+                            <div className="flex items-center gap-3 p-4">
+                              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-muted/50">
+                                <Icon className={cn("h-4 w-4", prompt.color)} />
+                              </div>
+                              <span className="text-sm">{prompt.text}</span>
+                            </div>
+                          </Card>
+                        );
+                      })}
                     </div>
                   </div>
                 )}
@@ -202,29 +226,29 @@ export function ChatPanel({
           {/* Typing indicator */}
           {isTyping && (
             <div className="flex gap-3 px-4 py-3">
-              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10">
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary/20 to-orange-600/20">
                 <Bot className="h-4 w-4 text-primary" />
               </div>
-              <div className="flex items-center gap-1 rounded-lg bg-muted px-4 py-3">
-                <span className="typing-dot h-2 w-2 rounded-full bg-muted-foreground" />
-                <span className="typing-dot h-2 w-2 rounded-full bg-muted-foreground" />
-                <span className="typing-dot h-2 w-2 rounded-full bg-muted-foreground" />
+              <div className="flex items-center gap-1.5 rounded-xl bg-muted/50 px-4 py-3 backdrop-blur-sm">
+                <span className="typing-dot h-2 w-2 rounded-full bg-primary" />
+                <span className="typing-dot h-2 w-2 rounded-full bg-primary" />
+                <span className="typing-dot h-2 w-2 rounded-full bg-primary" />
               </div>
             </div>
           )}
 
-          {/* Spacer for scroll */}
-          <div className="h-4" />
+          {/* Spacer for scroll - extra padding for fixed composer */}
+          <div className="h-32" />
         </div>
       </div>
 
-      {/* Scroll to bottom button */}
+      {/* Scroll to bottom button - positioned above fixed composer */}
       {showScrollButton && (
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
+        <div className="absolute bottom-36 left-1/2 -translate-x-1/2">
           <Button
             variant="default"
             size="icon"
-            className="h-8 w-8 rounded-full shadow-lg"
+            className="h-10 w-10 rounded-full shadow-lg shadow-primary/20 btn-hover-glow focus-ring-ember"
             onClick={() => scrollToBottom()}
             title="Scroll to bottom"
           >

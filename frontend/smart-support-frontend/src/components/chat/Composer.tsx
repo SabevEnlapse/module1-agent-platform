@@ -2,12 +2,13 @@
  * Composer component - The message input area at the bottom of the chat.
  * Handles user input, keyboard shortcuts (Enter to send, Shift+Enter for newline),
  * and provides send/stop buttons.
+ * Styled with glassmorphism and brown-red neon accent.
  */
 
 "use client";
 
 import * as React from "react";
-import { Send, Paperclip, X } from "lucide-react";
+import { Send, Paperclip, X, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
@@ -41,9 +42,10 @@ export interface ComposerProps {
  * - Auto-resizing textarea
  * - Enter to send, Shift+Enter for newline
  * - Character counter (optional)
- * - Send button with loading state
+ * - Send button with loading state and neon glow
  * - Stop button (when loading)
  * - Disabled attach button (placeholder for future functionality)
+ * - Glassmorphism styling
  * 
  * @example
  * <Composer
@@ -111,14 +113,14 @@ export function Composer({
   }, [value, autoResize]);
 
   return (
-    <div className="border-t bg-background p-4">
-      <div className="mx-auto flex max-w-3xl gap-2">
+    <div className="glass border-t backdrop-blur-xl">
+      <div className="mx-auto flex max-w-3xl gap-2 p-4">
         {/* Attach button (disabled for now) */}
         <Button
           type="button"
           variant="ghost"
           size="icon"
-          className="h-10 w-10 shrink-0"
+          className="h-10 w-10 shrink-0 focus-ring-ember"
           disabled
           title="Attach files (coming soon)"
         >
@@ -134,7 +136,7 @@ export function Composer({
             onKeyDown={handleKeyDown}
             placeholder={placeholder}
             disabled={isLoading}
-            className="min-h-[44px] max-h-[200px] resize-none py-3 pr-12"
+            className="min-h-[44px] max-h-[200px] resize-none border-border/50 bg-background/50 py-3 pr-12 backdrop-blur-sm focus:border-primary/50 focus:ring-2 focus:ring-primary/20"
             rows={1}
           />
           
@@ -144,7 +146,7 @@ export function Composer({
               type="button"
               variant="ghost"
               size="icon"
-              className="absolute right-2 top-1/2 h-6 w-6 -translate-y-1/2 p-0"
+              className="absolute right-2 top-1/2 h-6 w-6 -translate-y-1/2 p-0 hover:bg-muted/50"
               onClick={() => onChange("")}
             >
               <X className="h-4 w-4" />
@@ -158,7 +160,7 @@ export function Composer({
             type="button"
             variant="default"
             size="icon"
-            className="h-10 w-10 shrink-0"
+            className="h-10 w-10 shrink-0 bg-destructive hover:bg-destructive/90 btn-hover-glow focus-ring-ember"
             onClick={onStop}
             title="Stop generating"
           >
@@ -169,7 +171,10 @@ export function Composer({
             type="button"
             variant="default"
             size="icon"
-            className="h-10 w-10 shrink-0"
+            className={cn(
+              "h-10 w-10 shrink-0 bg-gradient-to-br from-primary to-orange-600 btn-hover-glow focus-ring-ember",
+              disabled && "opacity-50"
+            )}
             onClick={onSubmit}
             disabled={disabled}
             title="Send message (Enter)"
@@ -181,7 +186,7 @@ export function Composer({
 
       {/* Character counter */}
       {maxLength && (
-        <div className="mx-auto mt-2 max-w-3xl text-right">
+        <div className="mx-auto mb-2 max-w-3xl px-4 text-right">
           <span
             className={cn(
               "text-xs text-muted-foreground",

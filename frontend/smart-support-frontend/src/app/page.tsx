@@ -1,13 +1,17 @@
 /**
  * Main page component for the Smart Support application.
  * Manages the chat state, conversations, and API interactions.
+ * Features glassmorphism styling and brown-red neon accent.
  */
 
 "use client";
 
 import * as React from "react";
+import { Layers } from "lucide-react";
 import { AppShell } from "@/components/app-shell/AppShell";
+import { DetailsPanel } from "@/components/details/DetailsPanel";
 import { Conversation, ChatMessage } from "@/types/chat";
+import { cn } from "@/lib/utils";
 import {
   getConversations,
   saveConversations,
@@ -33,6 +37,7 @@ import { toast } from "sonner";
  * - Loading states
  * - Error handling
  * - Debug mode toggle
+ * - Details panel for debug information
  * - LocalStorage persistence
  */
 export default function Home() {
@@ -48,6 +53,9 @@ export default function Home() {
 
   // Debug mode state
   const [debugMode, setDebugModeState] = React.useState(false);
+
+  // Details panel state
+  const [isDetailsOpen, setIsDetailsOpen] = React.useState(false);
 
   // Abort controller for stopping requests
   const abortControllerRef = React.useRef<AbortController | null>(null);
@@ -276,24 +284,51 @@ export default function Home() {
   };
 
   return (
-    <main className="h-screen w-full overflow-hidden">
-      <AppShell
-        conversations={conversations}
-        currentConversationId={currentConversationId}
+    <main className="flex h-screen w-full overflow-hidden">
+      {/* Main app shell */}
+      <div className="flex flex-1 flex-col overflow-hidden">
+        <AppShell
+          conversations={conversations}
+          currentConversationId={currentConversationId}
+          messages={messages}
+          isTyping={isLoading}
+          debugMode={debugMode}
+          onSelectConversation={handleSelectConversation}
+          onNewConversation={handleNewConversation}
+          onRenameConversation={handleRenameConversation}
+          onDeleteConversation={handleDeleteConversation}
+          onSendMessage={handleSendMessage}
+          onInputChange={setInput}
+          inputValue={input}
+          onRetryMessage={handleRetryMessage}
+          onExamplePrompt={handleExamplePrompt}
+          onStopRequest={handleStopRequest}
+        />
+      </div>
+
+      {/* Details panel (collapsible) */}
+      <DetailsPanel
         messages={messages}
-        isTyping={isLoading}
         debugMode={debugMode}
-        onSelectConversation={handleSelectConversation}
-        onNewConversation={handleNewConversation}
-        onRenameConversation={handleRenameConversation}
-        onDeleteConversation={handleDeleteConversation}
-        onSendMessage={handleSendMessage}
-        onInputChange={setInput}
-        inputValue={input}
-        onRetryMessage={handleRetryMessage}
-        onExamplePrompt={handleExamplePrompt}
-        onStopRequest={handleStopRequest}
+        onToggleDebug={toggleDebugMode}
+        isOpen={isDetailsOpen}
+        onToggleOpen={() => setIsDetailsOpen(!isDetailsOpen)}
       />
+
+      {/* Floating toggle button for details panel */}
+      <button
+        onClick={() => setIsDetailsOpen(!isDetailsOpen)}
+        className={cn(
+          "fixed right-4 top-20 z-50 flex h-10 w-10 items-center justify-center rounded-xl glass transition-all duration-200 hover:scale-110 focus-ring-ember",
+          isDetailsOpen && "bg-primary/10 border-primary/30"
+        )}
+        title={isDetailsOpen ? "Close details" : "Open details"}
+      >
+        <Layers className={cn(
+          "h-5 w-5 transition-colors",
+          isDetailsOpen ? "text-primary" : "text-muted-foreground"
+        )} />
+      </button>
     </main>
   );
 }

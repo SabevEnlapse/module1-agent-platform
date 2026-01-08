@@ -1,12 +1,13 @@
 /**
  * Sidebar component - Displays the conversation list with management actions.
  * Features include new conversation, rename, delete, and mobile sheet support.
+ * Styled with glassmorphism and brown-red neon accent.
  */
 
 "use client";
 
 import * as React from "react";
-import { Plus, MessageSquare, MoreHorizontal, Trash2, Edit2, X } from "lucide-react";
+import { Plus, MessageSquare, MoreHorizontal, Trash2, Edit2, X, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -43,6 +44,24 @@ export interface SidebarProps {
   onClose?: () => void;
   /** Whether to render as a sheet (for mobile) */
   isSheet?: boolean;
+}
+
+/**
+ * Format timestamp for display.
+ */
+function formatTime(timestamp: number): string {
+  const date = new Date(timestamp);
+  const now = new Date();
+  const diffMs = now.getTime() - date.getTime();
+  const diffMins = Math.floor(diffMs / 60000);
+  const diffHours = Math.floor(diffMs / 3600000);
+  const diffDays = Math.floor(diffMs / 86400000);
+
+  if (diffMins < 1) return "Just now";
+  if (diffMins < 60) return `${diffMins}m ago`;
+  if (diffHours < 24) return `${diffHours}h ago`;
+  if (diffDays < 7) return `${diffDays}d ago`;
+  return date.toLocaleDateString();
 }
 
 /**
@@ -110,14 +129,17 @@ function ConversationItem({
   return (
     <div
       className={cn(
-        "group relative flex items-center gap-2 rounded-lg px-3 py-2 text-sm transition-colors",
+        "group relative flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm transition-all duration-200",
         isActive
-          ? "bg-accent text-accent-foreground"
+          ? "bg-primary/10 text-primary glow-subtle"
           : "text-muted-foreground hover:bg-accent/50 hover:text-foreground"
       )}
     >
       {/* Conversation icon */}
-      <MessageSquare className="h-4 w-4 shrink-0" />
+      <MessageSquare className={cn(
+        "h-4 w-4 shrink-0",
+        isActive && "text-primary"
+      )} />
 
       {/* Conversation title or edit input */}
       {isEditing ? (
@@ -128,7 +150,7 @@ function ConversationItem({
             onChange={(e) => setEditTitle(e.target.value)}
             onKeyDown={handleKeyDown}
             onBlur={handleRenameSubmit}
-            className="h-7 px-2 py-1 text-sm"
+            className="h-7 px-2 py-1 text-sm focus-ring-ember"
           />
           <Button
             variant="ghost"
@@ -146,6 +168,13 @@ function ConversationItem({
         >
           <span className="truncate">{conversation.title}</span>
         </button>
+      )}
+
+      {/* Message count badge */}
+      {!isEditing && conversation.messages.length > 0 && (
+        <span className="flex h-5 min-w-[20px] items-center justify-center rounded-full bg-muted px-1.5 text-xs font-medium text-muted-foreground">
+          {conversation.messages.length}
+        </span>
       )}
 
       {/* Actions dropdown (only show on hover or when active) */}
@@ -201,7 +230,9 @@ function ConversationItem({
  * - Rename conversation
  * - Delete conversation
  * - Mobile sheet support
- * - Active conversation highlighting
+ * - Active conversation highlighting with neon glow
+ * - Message count badges
+ * - Last updated timestamps
  * 
  * @example
  * <Sidebar
@@ -268,48 +299,61 @@ export function Sidebar({
         <Button
           variant="ghost"
           size="icon"
-          className="h-8 w-8"
+          className="h-8 w-8 btn-hover-glow focus-ring-ember"
           onClick={onNewConversation}
           title="New conversation"
         >
-          <Plus className="h-4 w-4" />
+          <Plus className="h-4 w-4 text-primary" />
         </Button>
       </div>
 
       {/* Conversation list */}
-      <ScrollArea className="flex-1">
+      <ScrollArea className="flex-1 scrollbar-thin">
         <div className="space-y-1 p-2">
           {sortedConversations.length === 0 ? (
-            <div className="px-3 py-8 text-center text-sm text-muted-foreground">
-              No conversations yet.<br />
-              Start a new one!
+            <div className="flex flex-col items-center justify-center px-3 py-12 text-center">
+              <MessageSquare className="mb-3 h-12 w-12 text-muted-foreground/30" />
+              <p className="text-sm text-muted-foreground">
+                No conversations yet
+              </p>
+              <p className="mt-1 text-xs text-muted-foreground/70">
+                Start a new one!
+              </p>
             </div>
           ) : (
             sortedConversations.map((conversation) => (
-              <ConversationItem
-                key={conversation.id}
-                conversation={conversation}
-                isActive={conversation.id === currentConversationId}
-                onSelect={() => handleSelectConversation(conversation.id)}
-                onRename={() => {
-                  const newTitle = prompt(
-                    "Enter new title:",
-                    conversation.title
-                  );
-                  if (newTitle) {
-                    handleRenameConversation(conversation.id, newTitle);
-                  }
-                }}
-                onDelete={() => {
-                  if (
-                    confirm(
-                      "Are you sure you want to delete this conversation?"
-                    )
-                  ) {
-                    handleDeleteConversation(conversation.id);
-                  }
-                }}
-              />
+              <div key={conversation.id}>
+                <ConversationItem
+                  conversation={conversation}
+                  isActive={conversation.id === currentConversationId}
+                  onSelect={() => handleSelectConversation(conversation.id)}
+                  onRename={() => {
+                    const newTitle = prompt(
+                      "Enter new title:",
+                      conversation.title
+                    );
+                    if (newTitle) {
+                      handleRenameConversation(conversation.id, newTitle);
+                    }
+                  }}
+                  onDelete={() => {
+                    if (
+                      confirm(
+                        "Are you sure you want to delete this conversation?"
+                      )
+                    ) {
+                      handleDeleteConversation(conversation.id);
+                    }
+                  }}
+                />
+                {/* Last updated timestamp */}
+                {conversation.id === currentConversationId && (
+                  <div className="ml-9 mt-0.5 flex items-center gap-1 text-xs text-muted-foreground/70">
+                    <Clock className="h-3 w-3" />
+                    {formatTime(conversation.updatedAt)}
+                  </div>
+                )}
+              </div>
             ))
           )}
         </div>
@@ -332,7 +376,7 @@ export function Sidebar({
   return (
     <aside
       className={cn(
-        "flex h-full w-[280px] flex-col border-r bg-background transition-all",
+        "glass flex h-full w-[280px] flex-col border-r transition-all",
         !isOpen && "hidden"
       )}
     >

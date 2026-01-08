@@ -1,12 +1,13 @@
 /**
  * MessageBubble component - Displays a single chat message with all its metadata.
  * Features include avatars, copy button, intent badge, sources panel, and traces panel.
+ * Styled with glassmorphism and brown-red neon accent.
  */
 
 "use client";
 
 import * as React from "react";
-import { Copy, Check, ChevronDown, ChevronUp, Bot, User, RefreshCw } from "lucide-react";
+import { Copy, Check, ChevronDown, ChevronUp, Bot, User, RefreshCw, ThumbsUp, ThumbsDown } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -55,11 +56,11 @@ function SourcesPanel({ sources }: { sources: Source[] }) {
       </Button>
       
       {isExpanded && (
-        <Card className="mt-2 p-3">
-          <div className="space-y-2">
+        <Card className="mt-2 border-border/50 bg-card/50 backdrop-blur-sm">
+          <div className="space-y-2 p-3">
             {sources.map((source, index) => (
               <div key={index} className="flex items-start gap-2 text-sm">
-                <Badge variant="outline" className="shrink-0">
+                <Badge variant="outline" className="shrink-0 border-primary/30 text-primary">
                   {source.type || "source"}
                 </Badge>
                 <div className="flex-1 space-y-1">
@@ -115,8 +116,8 @@ function TracesPanel({ traces }: { traces: Trace[] }) {
       </Button>
       
       {isExpanded && (
-        <Card className="mt-2 p-3">
-          <div className="space-y-2">
+        <Card className="mt-2 border-border/50 bg-card/50 backdrop-blur-sm">
+          <div className="space-y-2 p-3">
             {traces.map((trace, index) => (
               <div key={index} className="space-y-1">
                 <div className="flex items-center gap-2">
@@ -130,7 +131,7 @@ function TracesPanel({ traces }: { traces: Trace[] }) {
                   )}
                 </div>
                 {trace.data && (
-                  <pre className="mt-1 overflow-x-auto rounded bg-muted p-2 text-xs">
+                  <pre className="mt-1 overflow-x-auto rounded bg-muted/50 p-2 text-xs">
                     {JSON.stringify(trace.data, null, 2)}
                   </pre>
                 )}
@@ -150,10 +151,12 @@ function TracesPanel({ traces }: { traces: Trace[] }) {
  * - Different styles for user vs assistant messages
  * - Avatar with initials or icon
  * - Copy to clipboard for assistant messages
- * - Intent badge for assistant messages
+ * - Intent badge for assistant messages with neon accent
  * - Collapsible sources panel
  * - Collapsible traces panel (when debug mode is enabled)
  * - Retry button for failed user messages
+ * - Feedback buttons (thumbs up/down) for assistant messages
+ * - Glassmorphism styling
  * 
  * @example
  * <MessageBubble
@@ -168,6 +171,7 @@ export function MessageBubble({
   onRetry,
 }: MessageBubbleProps) {
   const [copied, setCopied] = React.useState(false);
+  const [feedback, setFeedback] = React.useState<"up" | "down" | null>(null);
   const isUser = message.role === "user";
   const isError = message.status === "error";
 
@@ -186,6 +190,14 @@ export function MessageBubble({
   };
 
   /**
+   * Handle feedback button click.
+   */
+  const handleFeedback = (type: "up" | "down") => {
+    setFeedback(type);
+    toast.success(type === "up" ? "Thanks for the feedback!" : "Thanks for letting us know!");
+  };
+
+  /**
    * Format timestamp for display.
    */
   const formatTime = (timestamp: number) => {
@@ -198,14 +210,14 @@ export function MessageBubble({
   return (
     <div
       className={cn(
-        "flex gap-3 px-4 py-3",
+        "flex gap-3 px-4 py-3 transition-colors",
         isUser ? "justify-end" : "justify-start"
       )}
     >
       {/* Avatar (only for assistant) */}
       {!isUser && (
         <Avatar className="h-8 w-8 shrink-0">
-          <AvatarFallback className="bg-primary text-primary-foreground">
+          <AvatarFallback className="bg-gradient-to-br from-primary to-orange-600 text-white">
             <Bot className="h-4 w-4" />
           </AvatarFallback>
         </Avatar>
@@ -221,10 +233,10 @@ export function MessageBubble({
         {/* Message bubble */}
         <div
           className={cn(
-            "rounded-lg px-4 py-3",
+            "message-glow rounded-2xl px-4 py-3 transition-all duration-200",
             isUser
-              ? "bg-primary text-primary-foreground"
-              : "bg-muted text-foreground",
+              ? "bg-gradient-to-br from-primary to-orange-600 text-white shadow-lg shadow-primary/20"
+              : "glass text-foreground",
             isError && "bg-destructive text-destructive-foreground"
           )}
         >
@@ -236,7 +248,7 @@ export function MessageBubble({
           {/* Intent badge (assistant only) */}
           {!isUser && message.responseMeta?.intent && (
             <div className="mt-2">
-              <Badge variant="secondary" className="text-xs">
+              <Badge className="bg-primary/10 border border-primary/30 text-primary hover:bg-primary/20">
                 Intent: {message.responseMeta.intent}
               </Badge>
             </div>
@@ -265,16 +277,46 @@ export function MessageBubble({
             <Button
               variant="ghost"
               size="icon"
-              className="h-6 w-6 p-0"
+              className="h-6 w-6 p-0 hover:bg-primary/10"
               onClick={handleCopy}
               title="Copy message"
             >
               {copied ? (
-                <Check className="h-3 w-3" />
+                <Check className="h-3 w-3 text-primary" />
               ) : (
                 <Copy className="h-3 w-3" />
               )}
             </Button>
+          )}
+
+          {/* Feedback buttons (assistant only) */}
+          {!isUser && !isError && (
+            <>
+              <Button
+                variant="ghost"
+                size="icon"
+                className={cn(
+                  "h-6 w-6 p-0 hover:bg-primary/10",
+                  feedback === "up" && "text-primary"
+                )}
+                onClick={() => handleFeedback("up")}
+                title="Helpful"
+              >
+                <ThumbsUp className="h-3 w-3" />
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                className={cn(
+                  "h-6 w-6 p-0 hover:bg-destructive/10",
+                  feedback === "down" && "text-destructive"
+                )}
+                onClick={() => handleFeedback("down")}
+                title="Not helpful"
+              >
+                <ThumbsDown className="h-3 w-3" />
+              </Button>
+            </>
           )}
 
           {/* Retry button (user only, on error) */}
@@ -282,7 +324,7 @@ export function MessageBubble({
             <Button
               variant="ghost"
               size="icon"
-              className="h-6 w-6 p-0 text-destructive hover:text-destructive"
+              className="h-6 w-6 p-0 text-destructive hover:text-destructive hover:bg-destructive/10"
               onClick={onRetry}
               title="Retry message"
             >

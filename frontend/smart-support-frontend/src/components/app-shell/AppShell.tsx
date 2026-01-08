@@ -1,15 +1,14 @@
 /**
  * AppShell component - The main application layout with sidebar, header, and chat area.
- * Provides a responsive layout with mobile sidebar support.
+ * Provides a responsive layout with mobile sidebar support and glassmorphism styling.
  */
 
 "use client";
 
 import * as React from "react";
-import { Menu, Bot, Settings } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
-import { ThemeToggle } from "@/components/theme/ThemeToggle";
+import { HeaderBar } from "./HeaderBar";
 import { Sidebar } from "@/components/sidebar/Sidebar";
 import { ChatPanel } from "@/components/chat/ChatPanel";
 import { Composer } from "@/components/chat/Composer";
@@ -57,9 +56,10 @@ export interface AppShellProps {
  * 
  * Features:
  * - Responsive sidebar (collapses on mobile)
- * - Header with app name, theme toggle, and new chat button
+ * - Glassmorphism header with neon accent
  * - Main chat area with messages and composer
  * - Mobile menu button to open sidebar
+ * - Dark gradient background
  * 
  * @example
  * <AppShell
@@ -124,61 +124,11 @@ export function AppShell({
   return (
     <div className="flex h-screen w-full flex-col overflow-hidden bg-background">
       {/* Header */}
-      <header className="flex h-14 items-center justify-between border-b px-4">
-        <div className="flex items-center gap-3">
-          {/* Mobile menu button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="lg:hidden"
-            onClick={() => setIsMobileSidebarOpen(true)}
-          >
-            <Menu className="h-5 w-5" />
-          </Button>
-
-          {/* App logo and title */}
-          <div className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-              <Bot className="h-5 w-5 text-primary-foreground" />
-            </div>
-            <div className="hidden sm:block">
-              <h1 className="text-sm font-semibold">Smart Support</h1>
-            </div>
-          </div>
-
-          {/* Conversation title (desktop only) */}
-          {currentConversationId && (
-            <>
-              <Separator orientation="vertical" className="h-6 hidden sm:block" />
-              <span className="hidden truncate text-sm text-muted-foreground sm:block">
-                {conversationTitle}
-              </span>
-            </>
-          )}
-        </div>
-
-        {/* Header actions */}
-        <div className="flex items-center gap-2">
-          {/* New chat button (desktop) */}
-          <Button
-            variant="ghost"
-            size="sm"
-            className="hidden sm:flex"
-            onClick={handleNewConversation}
-          >
-            <Menu className="mr-2 h-4 w-4" />
-            New Chat
-          </Button>
-
-          {/* Theme toggle */}
-          <ThemeToggle />
-
-          {/* Settings button (placeholder) */}
-          <Button variant="ghost" size="icon" disabled title="Settings (coming soon)">
-            <Settings className="h-5 w-5" />
-          </Button>
-        </div>
-      </header>
+      <HeaderBar
+        conversationTitle={conversationTitle}
+        onNewChat={handleNewConversation}
+        showNewChat
+      />
 
       {/* Main content */}
       <div className="flex flex-1 overflow-hidden">
@@ -209,7 +159,19 @@ export function AppShell({
         />
 
         {/* Chat area */}
-        <div className="flex flex-1 flex-col overflow-hidden">
+        <div className="relative flex flex-1 flex-col overflow-hidden">
+          {/* Mobile menu button overlay */}
+          <div className="lg:hidden flex items-center border-b bg-background/50 backdrop-blur-sm px-4 py-2">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsMobileSidebarOpen(true)}
+              className="focus-ring-ember"
+            >
+              <Menu className="h-5 w-5" />
+            </Button>
+          </div>
+
           {/* Chat panel */}
           <ChatPanel
             messages={messages}
@@ -219,16 +181,18 @@ export function AppShell({
             onExamplePrompt={onExamplePrompt}
           />
 
-          {/* Composer */}
-          <Composer
-            value={inputValue}
-            onChange={onInputChange}
-            onSubmit={() => onSendMessage(inputValue)}
-            isLoading={isTyping}
-            disabled={isSendDisabled}
-            placeholder="Type your message..."
-            onStop={onStopRequest}
-          />
+          {/* Composer - Fixed at bottom */}
+          <div className="fixed bottom-0 left-0 right-0 z-40 lg:left-[280px]">
+            <Composer
+              value={inputValue}
+              onChange={onInputChange}
+              onSubmit={() => onSendMessage(inputValue)}
+              isLoading={isTyping}
+              disabled={isSendDisabled}
+              placeholder="Type your message..."
+              onStop={onStopRequest}
+            />
+          </div>
         </div>
       </div>
     </div>
