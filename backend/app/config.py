@@ -66,7 +66,7 @@ class Config:
     # File paths
     PRODUCTS_PATH: str = os.getenv(
         "PRODUCTS_PATH",
-        str(Path(__file__).parent.parent.parent / "products.json")
+        str(Path(__file__).parent.parent / "products.json")
     )
     
     # CORS configuration

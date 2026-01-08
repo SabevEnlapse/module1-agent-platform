@@ -6,14 +6,29 @@
     "price": 29.99,
     "currency": "USD",
     "in_stock": true,
-    "description": "Ergonomic wireless mouse with precision tracking and long battery life.",
+    "stock_quantity": 150,
+    "brand": "TechPro",
+    "warranty": "1 year",
+    "rating": 4.5,
+    "reviews": 234,
+    "description": "Ergonomic wireless mouse with precision tracking and long battery life. Perfect for office work and casual gaming.",
     "features": [
       "2.4GHz wireless connection",
       "1600 DPI optical sensor",
       "Ergonomic design",
-      "Up to 12 months battery life"
+      "Up to 12 months battery life",
+      "Ambidextrous shape",
+      "Plug and play USB receiver"
     ],
-    "keywords": ["mouse", "wireless", "ergonomic", "accessory", "computer", "laptop"]
+    "specifications": {
+      "connectivity": "2.4GHz Wireless",
+      "dpi": "1600",
+      "battery_type": "AA",
+      "battery_life": "12 months",
+      "weight": "95g",
+      "dimensions": "110 x 65 x 38mm"
+    },
+    "keywords": ["mouse", "wireless", "ergonomic", "accessory", "computer", "laptop", "input", "pointer", "cursor"]
   },
   {
     "id": "P1002",
@@ -22,14 +37,28 @@
     "price": 89.99,
     "currency": "USD",
     "in_stock": true,
-    "description": "RGB mechanical keyboard with Cherry MX switches and customizable lighting.",
+    "stock_quantity": 75,
+    "brand": "KeyMaster",
+    "warranty": "2 years",
+    "rating": 4.7,
+    "reviews": 512,
+    "description": "RGB mechanical keyboard with Cherry MX switches and customizable lighting. Ideal for gaming and typing enthusiasts.",
     "features": [
       "Cherry MX Red switches",
       "Full RGB backlighting",
       "N-key rollover",
-      "Aluminum frame"
+      "Aluminum frame",
+      "Detachable USB-C cable",
+      "Programmable keys"
     ],
-    "keywords": ["keyboard", "mechanical", "rgb", "gaming", "typing", "switches"]
+    "specifications": {
+      "switch_type": "Cherry MX Red",
+      "backlight": "RGB",
+      "layout": "Full-size (104 keys)",
+      "connection": "USB-C",
+      "polling_rate": "1000Hz"
+    },
+    "keywords": ["keyboard", "mechanical", "rgb", "gaming", "typing", "switches", "input", "peripheral"]
   },
   {
     "id": "P1003",
@@ -38,14 +67,28 @@
     "price": 49.99,
     "currency": "USD",
     "in_stock": false,
-    "description": "7-in-1 USB-C hub with HDMI, USB 3.0 ports, and SD card reader.",
+    "stock_quantity": 0,
+    "brand": "ConnectAll",
+    "warranty": "1 year",
+    "rating": 4.3,
+    "reviews": 189,
+    "description": "7-in-1 USB-C hub with HDMI, USB 3.0 ports, and SD card reader. Expand your laptop's connectivity.",
     "features": [
       "4K HDMI output",
       "3x USB 3.0 ports",
       "SD and microSD card slots",
-      "USB-C Power Delivery"
+      "USB-C Power Delivery",
+      "Compact aluminum design",
+      "Mac and Windows compatible"
     ],
-    "keywords": ["hub", "usb-c", "adapter", "ports", "connectivity", "expansion"]
+    "specifications": {
+      "ports": "HDMI, 3x USB 3.0, SD, microSD, USB-C PD",
+      "hdmi_resolution": "4K@30Hz",
+      "usb_speed": "5Gbps",
+      "power_delivery": "100W",
+      "dimensions": "120 x 45 x 15mm"
+    },
+    "keywords": ["hub", "usb-c", "adapter", "ports", "connectivity", "expansion", "docking", "multiport"]
   },
   {
     "id": "P1004",
@@ -54,14 +97,30 @@
     "price": 299.99,
     "currency": "USD",
     "in_stock": true,
-    "description": "IPS display with 2560x1440 resolution and 75Hz refresh rate.",
+    "stock_quantity": 45,
+    "brand": "ViewMax",
+    "warranty": "3 years",
+    "rating": 4.6,
+    "reviews": 378,
+    "description": "IPS display with 2560x1440 resolution and 75Hz refresh rate. Perfect for productivity and multimedia.",
     "features": [
       "2560x1440 QHD resolution",
       "IPS panel",
       "75Hz refresh rate",
-      "AMD FreeSync support"
+      "AMD FreeSync support",
+      "VESA mount compatible",
+      "Low blue light mode"
     ],
-    "keywords": ["monitor", "display", "screen", "ips", "qhd", "27-inch"]
+    "specifications": {
+      "panel_type": "IPS",
+      "resolution": "2560x1440",
+      "refresh_rate": "75Hz",
+      "response_time": "5ms",
+      "brightness": "300 nits",
+      "contrast_ratio": "1000:1",
+      "viewing_angle": "178°/178°"
+    },
+    "keywords": ["monitor", "display", "screen", "ips", "qhd", "27-inch", "panel", "lcd", "led"]
   },
   {
     "id": "P1005",
@@ -70,13 +129,1379 @@
     "price": 59.99,
     "currency": "USD",
     "in_stock": true,
-    "description": "1080p HD webcam with auto-focus and built-in microphone.",
+    "stock_quantity": 200,
+    "brand": "StreamCam",
+    "warranty": "1 year",
+    "rating": 4.4,
+    "reviews": 445,
+    "description": "1080p HD webcam with auto-focus and built-in microphone. Great for video calls and streaming.",
     "features": [
       "1080p Full HD video",
       "Auto-focus lens",
       "Built-in noise-canceling mic",
-      "Wide-angle lens"
+      "Wide-angle lens",
+      "Privacy shutter",
+      "USB plug and play"
     ],
-    "keywords": ["webcam", "camera", "video", "1080p", "microphone", "streaming"]
+    "specifications": {
+      "resolution": "1080p@30fps",
+      "field_of_view": "90°",
+      "microphone": "Stereo noise-canceling",
+      "connection": "USB 2.0",
+      "mount": "Universal clip"
+    },
+    "keywords": ["webcam", "camera", "video", "1080p", "microphone", "streaming", "zoom", "conference"]
+  },
+  {
+    "id": "P1006",
+    "name": "Gaming Headset",
+    "category": "Audio",
+    "price": 79.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 120,
+    "brand": "AudioMax",
+    "warranty": "2 years",
+    "rating": 4.5,
+    "reviews": 678,
+    "description": "7.1 surround sound gaming headset with RGB lighting and detachable microphone.",
+    "features": [
+      "7.1 virtual surround sound",
+      "50mm neodymium drivers",
+      "RGB lighting",
+      "Detachable noise-canceling mic",
+      "Memory foam ear cushions",
+      "In-line volume control"
+    ],
+    "specifications": {
+      "driver_size": "50mm",
+      "frequency_response": "20Hz-20kHz",
+      "impedance": "32 Ohm",
+      "connection": "USB + 3.5mm",
+      "cable_length": "2.5m"
+    },
+    "keywords": ["headset", "gaming", "headphones", "audio", "microphone", "surround", "rgb", "7.1"]
+  },
+  {
+    "id": "P1007",
+    "name": "Wireless Earbuds",
+    "category": "Audio",
+    "price": 129.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 85,
+    "brand": "SoundWave",
+    "warranty": "1 year",
+    "rating": 4.6,
+    "reviews": 892,
+    "description": "True wireless earbuds with active noise cancellation and 24-hour battery life.",
+    "features": [
+      "Active noise cancellation",
+      "24-hour total battery life",
+      "IPX5 water resistance",
+      "Touch controls",
+      "Wireless charging case",
+      "Bluetooth 5.2"
+    ],
+    "specifications": {
+      "driver_size": "11mm",
+      "battery_earbuds": "6 hours",
+      "battery_case": "18 hours",
+      "bluetooth": "5.2",
+      "water_resistance": "IPX5",
+      "weight": "5g per earbud"
+    },
+    "keywords": ["earbuds", "wireless", "bluetooth", "anc", "noise", "cancellation", "audio", "music"]
+  },
+  {
+    "id": "P1008",
+    "name": "Portable SSD 1TB",
+    "category": "Storage",
+    "price": 149.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 60,
+    "brand": "DataVault",
+    "warranty": "3 years",
+    "rating": 4.8,
+    "reviews": 423,
+    "description": "Ultra-fast portable SSD with 1TB capacity and USB 3.2 Gen 2 connectivity.",
+    "features": [
+      "1TB storage capacity",
+      "Up to 1050MB/s read speed",
+      "USB 3.2 Gen 2",
+      "Shock and vibration resistant",
+      "Password protection",
+      "Compact and lightweight"
+    ],
+    "specifications": {
+      "capacity": "1TB",
+      "interface": "USB 3.2 Gen 2",
+      "read_speed": "1050MB/s",
+      "write_speed": "1000MB/s",
+      "dimensions": "75 x 55 x 10mm",
+      "weight": "78g"
+    },
+    "keywords": ["ssd", "storage", "external", "hard drive", "portable", "usb", "1tb", "fast"]
+  },
+  {
+    "id": "P1009",
+    "name": "External HDD 4TB",
+    "category": "Storage",
+    "price": 99.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 40,
+    "brand": "StoragePro",
+    "warranty": "2 years",
+    "rating": 4.3,
+    "reviews": 267,
+    "description": "High-capacity external hard drive with 4TB storage and USB 3.0 connectivity.",
+    "features": [
+      "4TB storage capacity",
+      "USB 3.0 backward compatible",
+      "Plug and play",
+      "Automatic backup software",
+      "Energy efficient",
+      "Mac and PC compatible"
+    ],
+    "specifications": {
+      "capacity": "4TB",
+      "interface": "USB 3.0",
+      "rpm": "5400",
+      "cache": "64MB",
+      "dimensions": "117 x 80 x 20mm"
+    },
+    "keywords": ["hdd", "hard drive", "storage", "external", "4tb", "backup", "usb", "data"]
+  },
+  {
+    "id": "P1010",
+    "name": "Wireless Router",
+    "category": "Networking",
+    "price": 199.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 55,
+    "brand": "NetLink",
+    "warranty": "2 years",
+    "rating": 4.4,
+    "reviews": 534,
+    "description": "Wi-Fi 6 dual-band router with gigabit ports and mesh capability.",
+    "features": [
+      "Wi-Fi 6 (802.11ax)",
+      "Dual-band 2.4GHz + 5GHz",
+      "4x Gigabit LAN ports",
+      "Mesh networking support",
+      "Parental controls",
+      "Guest network"
+    ],
+    "specifications": {
+      "wifi_standard": "Wi-Fi 6",
+      "speed": "AX3000",
+      "bands": "2.4GHz (574Mbps), 5GHz (2402Mbps)",
+      "lan_ports": "4x Gigabit",
+      "wan_port": "1x Gigabit",
+      "antennas": "4x external"
+    },
+    "keywords": ["router", "wifi", "wireless", "networking", "internet", "dual-band", "wi-fi 6", "mesh"]
+  },
+  {
+    "id": "P1011",
+    "name": "USB-C Cable",
+    "category": "Accessories",
+    "price": 14.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 500,
+    "brand": "CableMaster",
+    "warranty": "1 year",
+    "rating": 4.5,
+    "reviews": 1234,
+    "description": "Braided USB-C charging and data cable with 6ft length and fast charging support.",
+    "features": [
+      "6ft braided cable",
+      "USB 3.1 Gen 2",
+      "Up to 100W power delivery",
+      "480Mbps data transfer",
+      "Reinforced connectors",
+      "Tangle-free design"
+    ],
+    "specifications": {
+      "length": "6ft (1.8m)",
+      "connector": "USB-C to USB-C",
+      "data_speed": "480Mbps",
+      "power_delivery": "100W",
+      "current": "3A"
+    },
+    "keywords": ["cable", "usb-c", "charging", "data", "braided", "cord", "connector"]
+  },
+  {
+    "id": "P1012",
+    "name": "Laptop Stand",
+    "category": "Accessories",
+    "price": 39.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 90,
+    "brand": "ErgoDesk",
+    "warranty": "1 year",
+    "rating": 4.6,
+    "reviews": 345,
+    "description": "Aluminum laptop stand with adjustable height and cooling ventilation.",
+    "features": [
+      "Adjustable height and angle",
+      "Aluminum alloy construction",
+      "Heat dissipation design",
+      "Fits 10-17 inch laptops",
+      "Non-slip silicone pads",
+      "Foldable for portability"
+    ],
+    "specifications": {
+      "material": "Aluminum alloy",
+      "compatible_size": "10-17 inch",
+      "adjustable_angles": "6 levels",
+      "weight_capacity": "10kg",
+      "dimensions": "260 x 230 x 25mm"
+    },
+    "keywords": ["stand", "laptop", "ergonomic", "aluminum", "cooling", "adjustable", "desk"]
+  },
+  {
+    "id": "P1013",
+    "name": "Bluetooth Speaker",
+    "category": "Audio",
+    "price": 69.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 110,
+    "brand": "BoomBox",
+    "warranty": "1 year",
+    "rating": 4.4,
+    "reviews": 567,
+    "description": "Portable Bluetooth speaker with 20W output and 12-hour battery life.",
+    "features": [
+      "20W stereo output",
+      "12-hour battery life",
+      "IPX7 waterproof",
+      "Bluetooth 5.0",
+      "Built-in microphone",
+      "TWS pairing support"
+    ],
+    "specifications": {
+      "output_power": "20W",
+      "drivers": "2x 10W",
+      "battery": "4000mAh",
+      "bluetooth": "5.0",
+      "water_resistance": "IPX7",
+      "playback_time": "12 hours"
+    },
+    "keywords": ["speaker", "bluetooth", "portable", "audio", "waterproof", "wireless", "music"]
+  },
+  {
+    "id": "P1014",
+    "name": "Graphics Card RTX 3060",
+    "category": "Components",
+    "price": 399.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 25,
+    "brand": "GPUForce",
+    "warranty": "3 years",
+    "rating": 4.7,
+    "reviews": 189,
+    "description": "NVIDIA GeForce RTX 3060 with 12GB GDDR6 memory and ray tracing support.",
+    "features": [
+      "NVIDIA RTX 3060 GPU",
+      "12GB GDDR6 memory",
+      "Ray tracing support",
+      "DLSS technology",
+      "Triple fan cooling",
+      "RGB lighting"
+    ],
+    "specifications": {
+      "gpu": "NVIDIA RTX 3060",
+      "memory": "12GB GDDR6",
+      "cuda_cores": "3584",
+      "memory_speed": "15 Gbps",
+      "boost_clock": "1777 MHz",
+      "display_ports": "3x DisplayPort, 1x HDMI"
+    },
+    "keywords": ["graphics card", "gpu", "rtx", "nvidia", "gaming", "video", "3060", "ray tracing"]
+  },
+  {
+    "id": "P1015",
+    "name": "Power Supply 750W",
+    "category": "Components",
+    "price": 89.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 70,
+    "brand": "PowerMax",
+    "warranty": "5 years",
+    "rating": 4.5,
+    "reviews": 234,
+    "description": "80+ Gold certified modular power supply with 750W output.",
+    "features": [
+      "80+ Gold efficiency",
+      "750W output",
+      "Fully modular cables",
+      "120mm silent fan",
+      "Over-voltage protection",
+      "ATX form factor"
+    ],
+    "specifications": {
+      "wattage": "750W",
+      "efficiency": "80+ Gold",
+      "modular": "Fully modular",
+      "fan": "120mm",
+      "rails": "Single +12V",
+      "form_factor": "ATX"
+    },
+    "keywords": ["psu", "power supply", "750w", "modular", "gold", "atx", "computer"]
+  },
+  {
+    "id": "P1016",
+    "name": "Smart Watch",
+    "category": "Wearables",
+    "price": 249.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 65,
+    "brand": "FitTrack",
+    "warranty": "1 year",
+    "rating": 4.3,
+    "reviews": 456,
+    "description": "Fitness smartwatch with heart rate monitoring, GPS, and 7-day battery life.",
+    "features": [
+      "Heart rate monitoring",
+      "Built-in GPS",
+      "7-day battery life",
+      "Water resistant 50m",
+      "Sleep tracking",
+      "50+ sport modes"
+    ],
+    "specifications": {
+      "display": "1.4 inch AMOLED",
+      "battery": "300mAh",
+      "battery_life": "7 days",
+      "water_resistance": "5ATM",
+      "gps": "Built-in",
+      "sensors": "HR, SpO2, Accelerometer, Gyroscope"
+    },
+    "keywords": ["smartwatch", "watch", "fitness", "tracker", "gps", "heart rate", "wearable"]
+  },
+  {
+    "id": "P1017",
+    "name": "Wireless Charger",
+    "category": "Accessories",
+    "price": 29.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 180,
+    "brand": "ChargeFast",
+    "warranty": "1 year",
+    "rating": 4.4,
+    "reviews": 678,
+    "description": "Fast wireless charging pad compatible with Qi-enabled devices.",
+    "features": [
+      "15W fast charging",
+      "Qi wireless standard",
+      "LED indicator",
+      "Foreign object detection",
+      "Non-slip surface",
+      "USB-C power adapter included"
+    ],
+    "specifications": {
+      "output": "15W max",
+      "standard": "Qi",
+      "input": "USB-C",
+      "efficiency": "75%",
+      "dimensions": "100 x 100 x 8mm"
+    },
+    "keywords": ["charger", "wireless", "qi", "fast charging", "phone", "inductive"]
+  },
+  {
+    "id": "P1018",
+    "name": "USB Hub 10-Port",
+    "category": "Accessories",
+    "price": 34.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 95,
+    "brand": "PortMaster",
+    "warranty": "1 year",
+    "rating": 4.3,
+    "reviews": 234,
+    "description": "Powered USB 3.0 hub with 10 ports and individual power switches.",
+    "features": [
+      "10 USB 3.0 ports",
+      "5Gbps data transfer",
+      "Individual power switches",
+      "LED status indicators",
+      "External power adapter",
+      "Over-current protection"
+    ],
+    "specifications": {
+      "ports": "10x USB 3.0",
+      "data_speed": "5Gbps",
+      "power_adapter": "12V 3A",
+      "cable_length": "3ft",
+      "dimensions": "180 x 70 x 25mm"
+    },
+    "keywords": ["hub", "usb", "10-port", "powered", "expansion", "ports", "connectivity"]
+  },
+  {
+    "id": "P1019",
+    "name": "Mechanical Switch Tester",
+    "category": "Accessories",
+    "price": 19.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 150,
+    "brand": "KeyMaster",
+    "warranty": "1 year",
+    "rating": 4.6,
+    "reviews": 345,
+    "description": "Switch tester with 9 different mechanical switch types for trying before buying.",
+    "features": [
+      "9 switch types included",
+      "Transparent housing",
+      "Keycap puller included",
+      "Compact design",
+      "Educational tool",
+      "Great for testing"
+    ],
+    "specifications": {
+      "switches": "9 types (Red, Blue, Brown, Black, Green, Clear, Silver, Silent Red, Speed Silver)",
+      "material": "ABS plastic",
+      "dimensions": "120 x 60 x 15mm"
+    },
+    "keywords": ["switch tester", "mechanical", "keyboard", "switches", "testing", "accessory"]
+  },
+  {
+    "id": "P1020",
+    "name": "Webcam 4K",
+    "category": "Accessories",
+    "price": 149.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 45,
+    "brand": "StreamCam",
+    "warranty": "2 years",
+    "rating": 4.7,
+    "reviews": 234,
+    "description": "Ultra HD 4K webcam with auto-focus, HDR, and stereo microphones.",
+    "features": [
+      "4K Ultra HD video",
+      "HDR support",
+      "Auto-focus lens",
+      "Dual stereo microphones",
+      "Privacy shutter",
+      "Tripod mount included"
+    ],
+    "specifications": {
+      "resolution": "4K@30fps, 1080p@60fps",
+      "field_of_view": "90°",
+      "microphone": "Stereo",
+      "connection": "USB 3.0",
+      "frame_rate": "30fps (4K), 60fps (1080p)"
+    },
+    "keywords": ["webcam", "4k", "camera", "video", "streaming", "hdr", "ultra hd", "microphone"]
+  },
+  {
+    "id": "P1021",
+    "name": "Gaming Mouse",
+    "category": "Accessories",
+    "price": 59.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 130,
+    "brand": "GamePro",
+    "warranty": "2 years",
+    "rating": 4.6,
+    "reviews": 567,
+    "description": "High-performance gaming mouse with 16000 DPI sensor and RGB lighting.",
+    "features": [
+      "16000 DPI optical sensor",
+      "RGB customizable lighting",
+      "8 programmable buttons",
+      "1000Hz polling rate",
+      "Ergonomic design",
+      "On-board memory"
+    ],
+    "specifications": {
+      "sensor": "Optical 16000 DPI",
+      "buttons": "8 programmable",
+      "polling_rate": "1000Hz",
+      "weight": "110g",
+      "connection": "USB",
+      "dpi_range": "100-16000"
+    },
+    "keywords": ["mouse", "gaming", "dpi", "rgb", "programmable", "esports", "competitive"]
+  },
+  {
+    "id": "P1022",
+    "name": "Monitor 32-inch 4K",
+    "category": "Displays",
+    "price": 599.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 30,
+    "brand": "ViewMax",
+    "warranty": "3 years",
+    "rating": 4.8,
+    "reviews": 189,
+    "description": "32-inch 4K UHD monitor with HDR support and USB-C connectivity.",
+    "features": [
+      "3840x2160 4K resolution",
+      "HDR10 support",
+      "USB-C with Power Delivery",
+      "99% sRGB color gamut",
+      "Picture-in-Picture",
+      "Height adjustable stand"
+    ],
+    "specifications": {
+      "panel_type": "IPS",
+      "resolution": "3840x2160",
+      "refresh_rate": "60Hz",
+      "response_time": "4ms",
+      "brightness": "350 nits",
+      "contrast_ratio": "1000:1",
+      "color_gamut": "99% sRGB"
+    },
+    "keywords": ["monitor", "4k", "32-inch", "uhd", "hdr", "display", "screen", "usb-c"]
+  },
+  {
+    "id": "P1023",
+    "name": "Curved Monitor 34-inch",
+    "category": "Displays",
+    "price": 449.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 35,
+    "brand": "ViewMax",
+    "warranty": "3 years",
+    "rating": 4.6,
+    "reviews": 234,
+    "description": "34-inch curved ultrawide monitor with 144Hz refresh rate and 1ms response time.",
+    "features": [
+      "3440 x 1440 WQHD resolution",
+      "1500R curvature",
+      "144Hz refresh rate",
+      "1ms response time",
+      "AMD FreeSync Premium",
+      "Picture-by-Picture"
+    ],
+    "specifications": {
+      "panel_type": "VA",
+      "resolution": "3440x1440",
+      "refresh_rate": "144Hz",
+      "response_time": "1ms",
+      "curvature": "1500R",
+      "aspect_ratio": "21:9"
+    },
+    "keywords": ["monitor", "curved", "ultrawide", "34-inch", "144hz", "gaming", "wqhd"]
+  },
+  {
+    "id": "P1024",
+    "name": "Tablet Stand",
+    "category": "Accessories",
+    "price": 24.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 200,
+    "brand": "ErgoDesk",
+    "warranty": "1 year",
+    "rating": 4.4,
+    "reviews": 345,
+    "description": "Adjustable aluminum tablet stand for 7-13 inch tablets.",
+    "features": [
+      "Adjustable viewing angles",
+      "Aluminum construction",
+      "Fits 7-13 inch tablets",
+      "Non-slip silicone pads",
+      "Foldable design",
+      "Lightweight and portable"
+    ],
+    "specifications": {
+      "material": "Aluminum alloy",
+      "compatible_size": "7-13 inch",
+      "adjustable_angles": "5 levels",
+      "weight": "180g",
+      "dimensions": "150 x 120 x 15mm"
+    },
+    "keywords": ["stand", "tablet", "ipad", "adjustable", "aluminum", "holder", "desk"]
+  },
+  {
+    "id": "P1025",
+    "name": "Ethernet Cable Cat6",
+    "category": "Networking",
+    "price": 12.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 300,
+    "brand": "NetLink",
+    "warranty": "lifetime",
+    "rating": 4.5,
+    "reviews": 567,
+    "description": "25ft Cat6 ethernet cable with gold-plated connectors for reliable networking.",
+    "features": [
+      "Cat6 standard",
+      "25ft length",
+      "Gold-plated connectors",
+      "Snagless boots",
+      "550MHz bandwidth",
+      "Gigabit compatible"
+    ],
+    "specifications": {
+      "category": "Cat6",
+      "length": "25ft (7.6m)",
+      "bandwidth": "550MHz",
+      "speed": "Up to 10Gbps",
+      "connector": "RJ45 with gold plating"
+    },
+    "keywords": ["ethernet", "cable", "cat6", "network", "lan", "wired", "internet"]
+  },
+  {
+    "id": "P1026",
+    "name": "Memory RAM 16GB DDR4",
+    "category": "Components",
+    "price": 69.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 80,
+    "brand": "MemoryPro",
+    "warranty": "lifetime",
+    "rating": 4.7,
+    "reviews": 456,
+    "description": "16GB DDR4 3200MHz desktop memory module with heat spreader.",
+    "features": [
+      "16GB capacity",
+      "DDR4 3200MHz",
+      "CL16 latency",
+      "Aluminum heat spreader",
+      "Plug and play",
+      "XMP 2.0 support"
+    ],
+    "specifications": {
+      "capacity": "16GB",
+      "type": "DDR4",
+      "speed": "3200MHz",
+      "latency": "CL16",
+      "voltage": "1.35V",
+      "form_factor": "DIMM"
+    },
+    "keywords": ["ram", "memory", "ddr4", "16gb", "3200mhz", "upgrade", "desktop"]
+  },
+  {
+    "id": "P1027",
+    "name": "Memory RAM 32GB DDR4",
+    "category": "Components",
+    "price": 129.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 50,
+    "brand": "MemoryPro",
+    "warranty": "lifetime",
+    "rating": 4.8,
+    "reviews": 234,
+    "description": "32GB DDR4 3600MHz desktop memory kit (2x16GB) with RGB heat spreaders.",
+    "features": [
+      "32GB total (2x16GB)",
+      "DDR4 3600MHz",
+      "CL18 latency",
+      "RGB heat spreaders",
+      "Dual channel kit",
+      "XMP 2.0 support"
+    ],
+    "specifications": {
+      "capacity": "32GB (2x16GB)",
+      "type": "DDR4",
+      "speed": "3600MHz",
+      "latency": "CL18",
+      "voltage": "1.35V",
+      "form_factor": "DIMM"
+    },
+    "keywords": ["ram", "memory", "ddr4", "32gb", "3600mhz", "rgb", "kit", "dual channel"]
+  },
+  {
+    "id": "P1028",
+    "name": "CPU Cooler",
+    "category": "Components",
+    "price": 79.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 60,
+    "brand": "CoolMaster",
+    "warranty": "2 years",
+    "rating": 4.5,
+    "reviews": 345,
+    "description": "120mm RGB liquid CPU cooler with high-performance cooling.",
+    "features": [
+      "120mm radiator",
+      "RGB pump head",
+      "High static pressure fans",
+      "Universal socket compatibility",
+      "Low noise operation",
+      "Easy installation"
+    ],
+    "specifications": {
+      "radiator": "120mm",
+      "fans": "2x 120mm RGB",
+      "socket_support": "Intel LGA 115x/1200/1700, AMD AM4/AM5",
+      "noise_level": "25 dBA",
+      "tdp": "150W"
+    },
+    "keywords": ["cpu cooler", "liquid", "aio", "rgb", "cooling", "radiator", "fan"]
+  },
+  {
+    "id": "P1029",
+    "name": "Case Fan RGB 120mm",
+    "category": "Components",
+    "price": 14.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 250,
+    "brand": "CoolMaster",
+    "warranty": "2 years",
+    "rating": 4.4,
+    "reviews": 567,
+    "description": "120mm RGB case fan with high airflow and quiet operation.",
+    "features": [
+      "120mm size",
+      "RGB lighting",
+      "Hydraulic bearing",
+      "High airflow",
+      "Low noise",
+      "PWM control"
+    ],
+    "specifications": {
+      "size": "120mm",
+      "bearing": "Hydraulic",
+      "airflow": "52 CFM",
+      "noise": "25 dBA",
+      "speed": "1500 RPM",
+      "connector": "4-pin PWM"
+    },
+    "keywords": ["fan", "case fan", "rgb", "120mm", "cooling", "pwm", "airflow"]
+  },
+  {
+    "id": "P1030",
+    "name": "MicroSD Card 128GB",
+    "category": "Storage",
+    "price": 24.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 180,
+    "brand": "DataVault",
+    "warranty": "5 years",
+    "rating": 4.5,
+    "reviews": 678,
+    "description": "128GB UHS-I U3 microSD card with adapter for cameras and devices.",
+    "features": [
+      "128GB capacity",
+      "UHS-I U3 speed class",
+      "100MB/s read speed",
+      "Waterproof, shockproof, X-ray proof",
+      "SD adapter included",
+      "Great for 4K video"
+    ],
+    "specifications": {
+      "capacity": "128GB",
+      "speed_class": "UHS-I U3",
+      "read_speed": "100MB/s",
+      "write_speed": "60MB/s",
+      "video_speed": "V30"
+    },
+    "keywords": ["microsd", "sd card", "128gb", "memory", "storage", "camera", "uhs-i"]
+  },
+  {
+    "id": "P1031",
+    "name": "HDMI Cable 6ft",
+    "category": "Accessories",
+    "price": 9.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 400,
+    "brand": "CableMaster",
+    "warranty": "lifetime",
+    "rating": 4.6,
+    "reviews": 890,
+    "description": "High-speed HDMI 2.1 cable with 6ft length and 4K@120Hz support.",
+    "features": [
+      "HDMI 2.1 standard",
+      "6ft length",
+      "4K@120Hz support",
+      "8K@60Hz support",
+      "HDR and eARC support",
+      "Gold-plated connectors"
+    ],
+    "specifications": {
+      "standard": "HDMI 2.1",
+      "length": "6ft (1.8m)",
+      "bandwidth": "48Gbps",
+      "resolution": "8K@60Hz, 4K@120Hz",
+      "connector": "HDMI Male to Male"
+    },
+    "keywords": ["hdmi", "cable", "4k", "8k", "video", "connector", "high speed"]
+  },
+  {
+    "id": "P1032",
+    "name": "DisplayPort Cable",
+    "category": "Accessories",
+    "price": 12.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 200,
+    "brand": "CableMaster",
+    "warranty": "lifetime",
+    "rating": 4.5,
+    "reviews": 456,
+    "description": "DisplayPort 1.4 cable with 6ft length and 8K support.",
+    "features": [
+      "DisplayPort 1.4 standard",
+      "6ft length",
+      "8K@60Hz support",
+      "4K@144Hz support",
+      "HDR support",
+      "Latches for secure connection"
+    ],
+    "specifications": {
+      "standard": "DisplayPort 1.4",
+      "length": "6ft (1.8m)",
+      "bandwidth": "32.4Gbps",
+      "resolution": "8K@60Hz, 4K@144Hz"
+    },
+    "keywords": ["displayport", "cable", "dp", "4k", "8k", "video", "monitor"]
+  },
+  {
+    "id": "P1033",
+    "name": "Wireless Keyboard",
+    "category": "Accessories",
+    "price": 49.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 100,
+    "brand": "KeyMaster",
+    "warranty": "1 year",
+    "rating": 4.4,
+    "reviews": 345,
+    "description": "Slim wireless keyboard with scissor switches and long battery life.",
+    "features": [
+      "Slim profile design",
+      "Scissor switches",
+      "2.4GHz wireless",
+      "Up to 18 months battery",
+      "Full-size layout",
+      "Quiet typing"
+    ],
+    "specifications": {
+      "switch_type": "Scissor",
+      "connectivity": "2.4GHz Wireless",
+      "battery_life": "18 months",
+      "layout": "Full-size with numpad",
+      "dimensions": "440 x 140 x 20mm"
+    },
+    "keywords": ["keyboard", "wireless", "slim", "scissor", "quiet", "office", "typing"]
+  },
+  {
+    "id": "P1034",
+    "name": "Trackball Mouse",
+    "category": "Accessories",
+    "price": 44.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 70,
+    "brand": "TechPro",
+    "warranty": "1 year",
+    "rating": 4.3,
+    "reviews": 234,
+    "description": "Ergonomic trackball mouse with thumb control for reduced wrist strain.",
+    "features": [
+      "Thumb-operated trackball",
+      "Ergonomic design",
+      "Wireless connection",
+      "Programmable buttons",
+      "Precision tracking",
+      "Reduced wrist movement"
+    ],
+    "specifications": {
+      "trackball_size": "40mm",
+      "connectivity": "2.4GHz Wireless + Bluetooth",
+      "dpi": "1600",
+      "buttons": "6 programmable",
+      "battery": "AA (included)"
+    },
+    "keywords": ["trackball", "mouse", "ergonomic", "thumb", "wireless", "accessibility"]
+  },
+  {
+    "id": "P1035",
+    "name": "USB-C to HDMI Adapter",
+    "category": "Accessories",
+    "price": 19.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 150,
+    "brand": "ConnectAll",
+    "warranty": "1 year",
+    "rating": 4.4,
+    "reviews": 456,
+    "description": "USB-C to HDMI adapter for connecting laptops to external displays.",
+    "features": [
+      "USB-C to HDMI",
+      "4K@30Hz output",
+      "Plug and play",
+      "Aluminum housing",
+      "Compact design",
+      "Mac and Windows compatible"
+    ],
+    "specifications": {
+      "input": "USB-C",
+      "output": "HDMI",
+      "resolution": "4K@30Hz, 1080p@60Hz",
+      "dimensions": "50 x 30 x 12mm"
+    },
+    "keywords": ["adapter", "usb-c", "hdmi", "video", "display", "converter"]
+  },
+  {
+    "id": "P1036",
+    "name": "Desk Mat XL",
+    "category": "Accessories",
+    "price": 19.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 120,
+    "brand": "DeskPro",
+    "warranty": "1 year",
+    "rating": 4.5,
+    "reviews": 567,
+    "description": "Extra large desk mat with smooth surface for mouse and keyboard.",
+    "features": [
+      "XL size (36x17 inch)",
+      "Smooth surface",
+      "Non-slip rubber base",
+      "Water-resistant",
+      "Stitched edges",
+      "Multiple colors available"
+    ],
+    "specifications": {
+      "dimensions": "36 x 17 x 0.1 inch",
+      "material": "Fabric surface, rubber base",
+      "thickness": "3mm",
+      "surface": "Smooth"
+    },
+    "keywords": ["desk mat", "mouse pad", "xl", "large", "desk", "surface"]
+  },
+  {
+    "id": "P1037",
+    "name": "Cable Management Kit",
+    "category": "Accessories",
+    "price": 14.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 180,
+    "brand": "OrganizeIt",
+    "warranty": "1 year",
+    "rating": 4.3,
+    "reviews": 345,
+    "description": "Complete cable management kit with ties, clips, and organizers.",
+    "features": [
+      "20 cable ties",
+      "10 adhesive clips",
+      "5 cable sleeves",
+      "Velcro straps",
+      "Reusable design",
+      "Universal fit"
+    ],
+    "specifications": {
+      "contents": "20 ties, 10 clips, 5 sleeves, 5 straps",
+      "tie_length": "8 inch",
+      "sleeve_length": "20 inch"
+    },
+    "keywords": ["cable management", "ties", "clips", "organizer", "clean", "desk"]
+  },
+  {
+    "id": "P1038",
+    "name": "Screen Cleaning Kit",
+    "category": "Accessories",
+    "price": 12.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 200,
+    "brand": "CleanPro",
+    "warranty": "1 year",
+    "rating": 4.5,
+    "reviews": 678,
+    "description": "Screen cleaning kit with microfiber cloth and cleaning solution.",
+    "features": [
+      "100ml cleaning solution",
+      "2 microfiber cloths",
+      "Streak-free formula",
+      "Safe for all screens",
+      "Anti-static",
+      "Alcohol-free"
+    ],
+    "specifications": {
+      "solution_volume": "100ml",
+      "cloth_size": "6x6 inch",
+      "cloth_count": "2"
+    },
+    "keywords": ["screen cleaner", "cleaning", "microfiber", "monitor", "display", "kit"]
+  },
+  {
+    "id": "P1039",
+    "name": "Laptop Sleeve 15-inch",
+    "category": "Accessories",
+    "price": 24.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 90,
+    "brand": "ProtectCase",
+    "warranty": "1 year",
+    "rating": 4.4,
+    "reviews": 456,
+    "description": "Padded laptop sleeve for 15-inch laptops with water-resistant exterior.",
+    "features": [
+      "Fits 15-inch laptops",
+      "Padded protection",
+      "Water-resistant",
+      "Soft interior lining",
+      "Zipper closure",
+      "Slim profile"
+    ],
+    "specifications": {
+      "compatible_size": "15 inch",
+      "material": "Neoprene",
+      "dimensions": "15.5 x 11 x 0.8 inch"
+    },
+    "keywords": ["sleeve", "laptop", "case", "protection", "15-inch", "neoprene"]
+  },
+  {
+    "id": "P1040",
+    "name": "Webcam Ring Light",
+    "category": "Accessories",
+    "price": 29.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 110,
+    "brand": "LightPro",
+    "warranty": "1 year",
+    "rating": 4.3,
+    "reviews": 234,
+    "description": "10-inch LED ring light with tripod stand for video calls and streaming.",
+    "features": [
+      "10-inch ring light",
+      "3 color temperatures",
+      "10 brightness levels",
+      "USB powered",
+      "Adjustable tripod",
+      "Phone holder included"
+    ],
+    "specifications": {
+      "diameter": "10 inch",
+      "led_count": "120",
+      "color_temps": "3000K, 4500K, 6000K",
+      "power": "USB 5V",
+      "tripod_height": "7-20 inch"
+    },
+    "keywords": ["ring light", "led", "lighting", "webcam", "streaming", "video"]
+  },
+  {
+    "id": "P1041",
+    "name": "Mechanical Keyboard TKL",
+    "category": "Accessories",
+    "price": 79.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 65,
+    "brand": "KeyMaster",
+    "warranty": "2 years",
+    "rating": 4.6,
+    "reviews": 345,
+    "description": "Tenkeyless mechanical keyboard with hot-swappable switches and RGB.",
+    "features": [
+      "TKL layout (87 keys)",
+      "Hot-swappable switches",
+      "RGB backlighting",
+      "PBT keycaps",
+      "USB-C detachable",
+      "Gasket mount design"
+    ],
+    "specifications": {
+      "layout": "TKL (87 keys)",
+      "switch_type": "Hot-swappable (5-pin)",
+      "backlight": "Per-key RGB",
+      "keycaps": "PBT double-shot",
+      "connection": "USB-C"
+    },
+    "keywords": ["keyboard", "tkl", "mechanical", "hot-swappable", "rgb", "compact"]
+  },
+  {
+    "id": "P1042",
+    "name": "Wireless Mouse Vertical",
+    "category": "Accessories",
+    "price": 39.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 85,
+    "brand": "ErgoMouse",
+    "warranty": "1 year",
+    "rating": 4.4,
+    "reviews": 267,
+    "description": "Ergonomic vertical mouse designed to reduce wrist strain and prevent carpal tunnel.",
+    "features": [
+      "Vertical ergonomic design",
+      "2.4GHz wireless",
+      "1600 DPI sensor",
+      "5 programmable buttons",
+      "Rechargeable battery",
+      "LED indicator"
+    ],
+    "specifications": {
+      "dpi": "1600",
+      "buttons": "5",
+      "battery": "Rechargeable 500mAh",
+      "battery_life": "30 days",
+      "connection": "2.4GHz Wireless"
+    },
+    "keywords": ["mouse", "vertical", "ergonomic", "wireless", "wrist", "carpal tunnel"]
+  },
+  {
+    "id": "P1043",
+    "name": "USB-C Multiport Adapter",
+    "category": "Accessories",
+    "price": 69.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 75,
+    "brand": "ConnectAll",
+    "warranty": "1 year",
+    "rating": 4.5,
+    "reviews": 345,
+    "description": "11-in-1 USB-C adapter with HDMI, USB-A, Ethernet, and SD card slots.",
+    "features": [
+      "11 ports in one adapter",
+      "4K HDMI output",
+      "3x USB 3.0 ports",
+      "Gigabit Ethernet",
+      "SD and microSD slots",
+      "USB-C Power Delivery 100W"
+    ],
+    "specifications": {
+      "ports": "HDMI, 3x USB-A, Ethernet, SD, microSD, USB-C PD, USB-C data",
+      "hdmi_resolution": "4K@30Hz",
+      "ethernet": "Gigabit",
+      "power_delivery": "100W"
+    },
+    "keywords": ["adapter", "usb-c", "multiport", "hub", "docking", "11-in-1"]
+  },
+  {
+    "id": "P1044",
+    "name": "Monitor Light Bar",
+    "category": "Accessories",
+    "price": 49.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 60,
+    "brand": "LightPro",
+    "warranty": "1 year",
+    "rating": 4.5,
+    "reviews": 234,
+    "description": "Screen bar light with adjustable color temperature and brightness for monitor.",
+    "features": [
+      "Adjustable color temperature",
+      "Stepless brightness control",
+      "Auto-dimming sensor",
+      "USB powered",
+      "Easy clip-on mount",
+      "No screen glare"
+    ],
+    "specifications": {
+      "length": "18 inch",
+      "led_count": "84",
+      "color_temp": "2700K-6500K",
+      "power": "USB 5V",
+      "lux": "500 max"
+    },
+    "keywords": ["monitor light", "screen bar", "led", "desk", "bias lighting"]
+  },
+  {
+    "id": "P1045",
+    "name": "Wireless Charging Pad 3-in-1",
+    "category": "Accessories",
+    "price": 59.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 70,
+    "brand": "ChargeFast",
+    "warranty": "1 year",
+    "rating": 4.4,
+    "reviews": 345,
+    "description": "3-in-1 wireless charging station for phone, watch, and earbuds.",
+    "features": [
+      "Charges phone, watch, earbuds",
+      "15W fast charging",
+      "Qi wireless standard",
+      "LED indicators",
+      "Foreign object detection",
+      "Case compatible"
+    ],
+    "specifications": {
+      "phone_output": "15W max",
+      "watch_output": "5W",
+      "earbuds_output": "5W",
+      "input": "USB-C 18W",
+      "dimensions": "120 x 100 x 15mm"
+    },
+    "keywords": ["wireless charger", "3-in-1", "charging station", "phone", "watch", "earbuds"]
+  },
+  {
+    "id": "P1046",
+    "name": "Gaming Chair",
+    "category": "Furniture",
+    "price": 299.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 25,
+    "brand": "ComfortSeat",
+    "warranty": "2 years",
+    "rating": 4.5,
+    "reviews": 189,
+    "description": "Ergonomic gaming chair with lumbar support, 4D armrests, and reclining backrest.",
+    "features": [
+      "Ergonomic design",
+      "Lumbar pillow included",
+      "4D adjustable armrests",
+      "90-155 degree recline",
+      "PU leather material",
+      "Weight capacity 330lbs"
+    ],
+    "specifications": {
+      "material": "PU leather",
+      "weight_capacity": "330 lbs",
+      "recline_angle": "90-155 degrees",
+      "seat_height": "17.5-21.5 inch",
+      "dimensions": "27 x 27 x 51 inch"
+    },
+    "keywords": ["chair", "gaming", "ergonomic", "office", "reclining", "lumbar"]
+  },
+  {
+    "id": "P1047",
+    "name": "Standing Desk Converter",
+    "category": "Furniture",
+    "price": 199.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 40,
+    "brand": "ErgoDesk",
+    "warranty": "3 years",
+    "rating": 4.6,
+    "reviews": 234,
+    "description": "Height-adjustable desk converter for sitting and standing positions.",
+    "features": [
+      "Gas spring assist",
+      "Height adjustable 4.7-19.7 inch",
+      "32 inch wide surface",
+      "Keyboard tray included",
+      "Sturdy steel frame",
+      "Easy assembly"
+    ],
+    "specifications": {
+      "width": "32 inch",
+      "depth": "22 inch",
+      "height_range": "4.7-19.7 inch",
+      "weight_capacity": "35 lbs",
+      "lift_mechanism": "Gas spring"
+    },
+    "keywords": ["standing desk", "converter", "height adjustable", "sit stand", "ergonomic"]
+  },
+  {
+    "id": "P1048",
+    "name": "Monitor Arm Dual",
+    "category": "Accessories",
+    "price": 79.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 55,
+    "brand": "MountPro",
+    "warranty": "3 years",
+    "rating": 4.5,
+    "reviews": 345,
+    "description": "Dual monitor arm with gas spring and full motion adjustment.",
+    "features": [
+      "Supports 2 monitors",
+      "Gas spring adjustment",
+      "Full motion: tilt, swivel, rotate",
+      "Cable management",
+      "C-clamp and grommet mount",
+      "Weight capacity 22lbs per arm"
+    ],
+    "specifications": {
+      "monitor_capacity": "2x 17-32 inch",
+      "weight_capacity": "22 lbs per arm",
+      "vesa": "75x75, 100x100",
+      "extension": "24 inch",
+      "material": "Steel and aluminum"
+    },
+    "keywords": ["monitor arm", "dual", "mount", "gas spring", "adjustable", "desk"]
+  },
+  {
+    "id": "P1049",
+    "name": "Noise Canceling Headphones",
+    "category": "Audio",
+    "price": 199.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 45,
+    "brand": "AudioMax",
+    "warranty": "2 years",
+    "rating": 4.7,
+    "reviews": 567,
+    "description": "Over-ear wireless headphones with active noise cancellation and 30-hour battery.",
+    "features": [
+      "Active noise cancellation",
+      "30-hour battery life",
+      "Bluetooth 5.0",
+      "Hi-Res audio support",
+      "Touch controls",
+      "Foldable design"
+    ],
+    "specifications": {
+      "driver_size": "40mm",
+      "frequency_response": "4Hz-40kHz",
+      "battery_life": "30 hours (ANC on)",
+      "charging": "USB-C",
+      "weight": "250g"
+    },
+    "keywords": ["headphones", "noise canceling", "anc", "wireless", "bluetooth", "over-ear"]
+  },
+  {
+    "id": "P1050",
+    "name": "Studio Monitor Speakers",
+    "category": "Audio",
+    "price": 299.99,
+    "currency": "USD",
+    "in_stock": true,
+    "stock_quantity": 30,
+    "brand": "ProAudio",
+    "warranty": "2 years",
+    "rating": 4.8,
+    "reviews": 234,
+    "description": "Pair of 5-inch studio monitor speakers for accurate audio production.",
+    "features": [
+      "5-inch woofer",
+      "1-inch silk dome tweeter",
+      "50W RMS per speaker",
+      "Flat frequency response",
+      "Front-ported design",
+      "Rear panel controls"
+    ],
+    "specifications": {
+      "woofer": "5 inch",
+      "tweeter": "1 inch silk dome",
+      "power": "50W RMS per speaker",
+      "frequency_response": "52Hz-35kHz",
+      "inputs": "RCA, XLR, TRS"
+    },
+    "keywords": ["studio monitors", "speakers", "audio", "production", "reference", "professional"]
   }
 ]

@@ -95,12 +95,64 @@ The frontend will be available at `http://localhost:3000`
 - "Track order ORD-1001"
 - "Where is my order 55512?"
 - "What's the status of ORD-1002?"
+- "When will my package ORD-1003 arrive?"
+- "Check delivery status for order 12345"
 
 ### Product Queries
+
+#### Basic Product Search
 - "Wireless Mouse"
 - "What is the price of Mechanical Keyboard?"
 - "Tell me about P1004"
 - "USB-C hub"
+
+#### Product by ID
+- "Show me P1001"
+- "What is P1010?"
+- "Details for P1022"
+
+#### Category-Based Queries
+- "Show me all monitors"
+- "What keyboards do you have?"
+- "Do you have any gaming accessories?"
+- "Audio products"
+- "Storage devices"
+
+#### Feature-Specific Queries
+- "4K monitor"
+- "Wireless earbuds with noise cancellation"
+- "Mechanical keyboard with RGB"
+- "Gaming mouse with high DPI"
+- "USB-C adapter with HDMI"
+
+#### Price and Availability Queries
+- "Products under $50"
+- "What's the most expensive monitor?"
+- "Is the USB-C Hub in stock?"
+- "Show me available gaming headsets"
+
+#### Brand and Rating Queries
+- "TechPro products"
+- "High-rated keyboards"
+- "Products with 4.5+ rating"
+- "ViewMax monitors"
+
+#### Specification Queries
+- "32GB RAM"
+- "4K webcam"
+- "144Hz monitor"
+- "1TB SSD"
+- "Wi-Fi 6 router"
+
+#### Comparison Queries
+- "Compare P1001 and P1021"
+- "Difference between wireless and gaming mouse"
+- "Which is better: P1002 or P1041?"
+
+#### Out of Stock Queries
+- "Why is P1003 unavailable?"
+- "When will the USB-C Hub be back in stock?"
+- "Products currently out of stock"
 
 ## API Endpoints
 
