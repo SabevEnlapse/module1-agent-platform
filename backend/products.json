@@ -1,0 +1,82 @@
+[
+  {
+    "id": "P1001",
+    "name": "Wireless Mouse",
+    "category": "Accessories",
+    "price": 29.99,
+    "currency": "USD",
+    "in_stock": true,
+    "description": "Ergonomic wireless mouse with precision tracking and long battery life.",
+    "features": [
+      "2.4GHz wireless connection",
+      "1600 DPI optical sensor",
+      "Ergonomic design",
+      "Up to 12 months battery life"
+    ],
+    "keywords": ["mouse", "wireless", "ergonomic", "accessory", "computer", "laptop"]
+  },
+  {
+    "id": "P1002",
+    "name": "Mechanical Keyboard",
+    "category": "Accessories",
+    "price": 89.99,
+    "currency": "USD",
+    "in_stock": true,
+    "description": "RGB mechanical keyboard with Cherry MX switches and customizable lighting.",
+    "features": [
+      "Cherry MX Red switches",
+      "Full RGB backlighting",
+      "N-key rollover",
+      "Aluminum frame"
+    ],
+    "keywords": ["keyboard", "mechanical", "rgb", "gaming", "typing", "switches"]
+  },
+  {
+    "id": "P1003",
+    "name": "USB-C Hub",
+    "category": "Accessories",
+    "price": 49.99,
+    "currency": "USD",
+    "in_stock": false,
+    "description": "7-in-1 USB-C hub with HDMI, USB 3.0 ports, and SD card reader.",
+    "features": [
+      "4K HDMI output",
+      "3x USB 3.0 ports",
+      "SD and microSD card slots",
+      "USB-C Power Delivery"
+    ],
+    "keywords": ["hub", "usb-c", "adapter", "ports", "connectivity", "expansion"]
+  },
+  {
+    "id": "P1004",
+    "name": "27-inch Monitor",
+    "category": "Displays",
+    "price": 299.99,
+    "currency": "USD",
+    "in_stock": true,
+    "description": "IPS display with 2560x1440 resolution and 75Hz refresh rate.",
+    "features": [
+      "2560x1440 QHD resolution",
+      "IPS panel",
+      "75Hz refresh rate",
+      "AMD FreeSync support"
+    ],
+    "keywords": ["monitor", "display", "screen", "ips", "qhd", "27-inch"]
+  },
+  {
+    "id": "P1005",
+    "name": "Webcam HD",
+    "category": "Accessories",
+    "price": 59.99,
+    "currency": "USD",
+    "in_stock": true,
+    "description": "1080p HD webcam with auto-focus and built-in microphone.",
+    "features": [
+      "1080p Full HD video",
+      "Auto-focus lens",
+      "Built-in noise-canceling mic",
+      "Wide-angle lens"
+    ],
+    "keywords": ["webcam", "camera", "video", "1080p", "microphone", "streaming"]
+  }
+]
